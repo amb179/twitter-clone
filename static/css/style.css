@@ -1,0 +1,208 @@
+/*
+common
+***************************/
+
+html, body {
+    height: 100%;
+    margin: 0 auto;
+    width: 50%;
+    
+}
+
+.content {
+    width: fit-content;
+    height: auto;
+    margin: 0 auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.top {
+    border-bottom: 1px solid #ccc;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: -webkit-fill-available;
+}
+
+.top .container {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+
+.top .container img {
+    width: 19%;
+    margin: 0 0 0 8px;
+}
+
+
+/*
+Post
+**************************/
+
+
+.post_form {
+    padding: 17px;
+    border-bottom: 1px solid #ccc;
+    height: auto;
+    gap: 10px;
+    width: fit-content;
+}
+
+.post_form input {
+    width: auto;
+    padding: 8px;
+    height: auto;
+}
+
+.post_form input .text {
+    border: hidden;
+    background-color: lightcyan;
+    width: 309px;
+    margin-top: 6px;
+}
+
+.post_form input .submit {
+    width: 20%;
+    margin-bottom: auto;
+    border: 1px solid #1DA1F2;
+    background-color: #1DA1F2;
+    color: white;
+}
+
+/*.post_form input .image {
+    border: 1px solid gray;
+    width: 59%;
+    margin-right: 46px;
+}*/
+
+.post_form textarea {
+    padding: 10px;
+    border: hidden;
+    width: 370px;
+    height: 90px;
+    border-bottom: 1px solid #ccc;
+}
+
+.post_form .logo {
+    flex-basis: 15%;
+}
+
+.post_form .logo img {
+    width: 10%;
+}
+
+
+
+.post_form form {
+    display: inline-block;
+    height: auto;
+    margin-left: 70px;
+    margin-top: -12%;
+}
+
+
+.posts ul {
+    padding: 0;
+    display: contents;
+}
+
+.posts li {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 17px;
+    list-style: none;
+    height: auto;
+}
+
+.posts li .menu_icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    display: flex;
+    right: 24px;
+    top: 17px;
+}
+
+.posts li .menu {
+    display: none;
+    position: absolute;
+    top: 7px;
+    right: 46px;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px 15px;
+    height: auto;
+    width: auto;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+.posts li .menu a {
+    text-decoration: none;
+    display: block;
+}
+
+.posts li .logo {
+    flex-basis: 15%;
+}
+
+.posts li .logo img {
+    width: 64%;
+    position: relative;
+}
+
+.posts li .name_body {
+    flex-basis: 85%;
+}
+
+.posts li .name_body .name {
+    font-weight: bold;
+}
+
+.posts li .name_body .datetime {
+    color: gray;
+}
+
+.posts li .name_body .size {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+
+@media screen and (width: 600px) {
+    .posts li .name_body .name {
+        font-size: 20px;
+    }
+}
+
+@media screen and (width: 600px) {
+    .post_form form {
+        float: left;
+    
+    }
+}
+
+/* like button */
+
+.posts li .like button {
+    background: transparent;
+    border: none;
+    font-size: 39px;
+    outline: none;
+    color: grey;
+}
+
+.posts li .like img {
+    width: 6%;
+}
+
+.posts li .btn i:hover {
+    cursor: pointer;
+}

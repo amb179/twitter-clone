@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}{% block content %} {% load static %}
+
+<section class="content">
+    <section class="top">
+        <div class="home">
+            <div class="container">
+                <img src="{% static 'img/techis-logo.png' %}">
+                <a class="home-brand title-icon">Edit</a>
+            </div>
+        </div>
+    </section>
+    <section class="post_form">
+        <div class="logo">
+            <img src="{% static 'img/user.png' %}" />
+        </div>
+        <form action="/edit/{{post.id}}" method="POST">
+            {% csrf_token %}
+            <input type="text" name="name" value="{{post.name}}" >
+            <textarea name="body" value="{{post.body}}" >{{post.body}}</textarea>
+
+            <input type="file" id="img-select">
+            <!--<label for="imgupload">Upload</label></label>
+                <input type="file" id="imgupload" />-->
+            <input type="submit" value="Update" />
+            <script src="static/js/file.js"></script>
+        </form>
+    </section>
+
+{% endblock %}
